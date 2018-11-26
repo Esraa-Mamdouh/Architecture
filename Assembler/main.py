@@ -7,8 +7,8 @@ Created on Mon Nov 26 00:16:07 2018
 
 from Classes import *
 def main():
-    instructionsArr=[]
-    registersArr=[]
+    global instructionsArr=[]
+    global registersArr=[]
     #-----------------------------------------# 9
     #search for ","
     instructionArr.append(Instructions("MOV",2))
@@ -58,6 +58,18 @@ def main():
     registersArr.append(Register("R5"))
     registersArr.append(Register("R6"))    #PC
     registersArr.append(Register("R7"))     #SP
+    #-----------------------------------------------#
+def searchInstruction(inst):
+    for i in range len(instructionsArr):
+        if( inst == instructionsArr[i].instruction):
+            return instructionsArr[i]
+def searchRegister():
+    for i in range len(registersArr):
+        if(inst == registersArr[i].registerName):
+            return registersArr[i]   
+def lookUpTable():
+    ####################
+    
 
 
 if __name__ == "__main__":
